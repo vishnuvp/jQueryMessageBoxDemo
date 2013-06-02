@@ -193,12 +193,17 @@ background-color: rgba(245, 135, 121,0.2);
 	</head>
 	<body>
 	<ul>
-		<li><a href="#" id="sucm">Success Modal</a></li>
-		<li><a href="#" id="warm">Warning Modal</a></li>
-		<li><a href="#" id="errm">Error Modal</a></li>
-		<li><a href="#" id="sucb">Success Banner</a></li>
-		<li><a href="#" id="warb">Warning Banner</a></li>
-		<li><a href="#" id="errb">Error Banner</a></li>
+		<li><a href="#" id="sucm">Success Modal</a>:<hr />success box that gets displayed after 1 second and autocloses in 5 seconds<br />Code: <i>
+$.messageBox({type:'modal',behavior:'success',fontStyle:'Times',showAfter:true,showAfterDuration: 1000,autoClose:true,duration:5000,title:'Done!',text:'The changes have been saved'});
+		
+		</i> </li>
+		<li><a href="#" id="warm">Warning Modal</a>:<hr /> a normal warning box <br />Code: <i>$.messageBox({type:'modal',behavior:'warning',title:'Warning',text:'This box contains the warning text'});
+		
+</i></li>
+		<li><a href="#" id="errm">Error Modal</a>:<hr /> a normal error box <br />Code: <i>$.messageBox({type:'modal',behavior:'error',title:'Error',text:'Your action has caused an unexpected error'});</i></li>
+		<li><a href="#" id="sucb">Success Banner</a>:<hr />success box that gets displayed after 1 second and autocloses in 5 seconds<br />Code: <i>$.messageBox({type:'banner',behavior:'success',fontStyle:'Times',showAfter:true,showAfterDuration: 1000,autoClose:true,duration:5000,text:'This box contains the success text'});</i></li>
+		<li><a href="#" id="warb">Warning Banner:<hr /> a normal warning banner <br />Code: <i>$.messageBox({type:'modal',behavior:'warning',title:'Warning',text:'This box contains the warning text'});</i></a></li>
+		<li><a href="#" id="errb">Error Banner</a>:<hr /> a normal error banner <br />Code: <i>$.messageBox({type:'banner',behavior:'error',text:'Your action has caused an unexpected error'});</i></li>
 	</ul>
 		<script type="text/javascript">
 		$("#sucm").click(function(){
@@ -217,7 +222,7 @@ background-color: rgba(245, 135, 121,0.2);
 		$.messageBox({type:'banner',behavior:'warning',text:'Your action has caused an unexpected warning'});
 		});
 		$("#errb").click(function(){
-		$.messageBox({type:'banner',behavior:'error',text:'Your action has caused an unexpected error.Your action has caused an unexpected error.Your action has caused an unexpected error.Your action has caused an unexpected error'});
+		$.messageBox({type:'banner',behavior:'error',text:'Your action has caused an unexpected error'});
 		});
 		</script>
 	</body>
